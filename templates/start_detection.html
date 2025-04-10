@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Recognition</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://img.freepik.com/premium-photo/blue-sky-background-white-clouds-bright-sunlight_360074-5662.jpg?semt=ais_hybrid&w=740');
+            background-size: cover;
+            padding-top: 20px;
+            color: #333;
+            overflow-y: scroll;
+            margin: 0;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .button-stop {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .button-stop:hover {
+            background-color: #BF3D1B;
+        }
+        .video-container {
+            width: 720px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .video-feed {
+            width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hand Gesture Recognition System for Drones - Video Feed</h1>
+    <div class="video-container">
+        <img class="video-feed" id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <button class="button-stop" onclick="window.location.href='/'">Stop</button>
+</body>
+</html>
